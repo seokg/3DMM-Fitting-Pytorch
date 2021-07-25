@@ -104,7 +104,7 @@ class BFM09ReconModel(BaseReconModel):
                 batch_num, 1, 1), face_color_tv)
             rendered_img = self.renderer(mesh)
             rendered_img = torch.clamp(rendered_img, 0, 255)
-
+    
             return {'rendered_img': rendered_img,
                     'lms_proj': lms_proj,
                     'face_texture': face_texture,
